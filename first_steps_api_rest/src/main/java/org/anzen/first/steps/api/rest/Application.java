@@ -8,7 +8,9 @@
  */
 package org.anzen.first.steps.api.rest;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * <p></p>
@@ -19,14 +21,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @category
  */
 @SpringBootApplication
+@Configuration
 public class Application {
 
+	private static Class<Application> foo = Application.class;
 	/**
 	 * <p></p>
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		SpringApplication.run(foo, args);
 	}
 }
