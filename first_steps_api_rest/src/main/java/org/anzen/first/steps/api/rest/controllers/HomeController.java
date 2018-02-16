@@ -30,5 +30,7 @@ public class HomeController {
 	public ResponseEntity<String> holaMundo(@RequestParam String name) {
 		String foo = String.format("primeros pasos de %s", name);
 		return new ResponseEntity<>(foo, HttpStatus.OK);
+		
+		
 	}
 }
