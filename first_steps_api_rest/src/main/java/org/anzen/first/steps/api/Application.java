@@ -6,11 +6,11 @@
  * THIS SOFTWARE IS  CONFIDENTIAL INFORMATION PROPIETARY OF ANZEN SOLUCIONES.
  * THIS INFORMATION SHOULD NOT BE DISCLOSED AND MAY ONLY BE USED IN ACCORDANCE THE TERMS DETERMINED BY THE COMPANY ITSELF.
  */
-package org.anzen.first.steps.api.rest;
+package org.anzen.first.steps.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * <p></p>
@@ -21,7 +21,8 @@ import org.springframework.context.annotation.Configuration;
  * @category
  */
 @SpringBootApplication
-@Configuration
+
+@ComponentScan( value ="org.anzen.first.steps.api.controller")
 public class Application {
 
 	private static Class<Application> foo = Application.class;
@@ -31,6 +32,6 @@ public class Application {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(foo, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
