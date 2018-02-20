@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -26,11 +26,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/home")
 public class HomeController {
 
-	@GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<String> holaMundo(@RequestParam String name) {
+	@GetMapping(value = "/{name}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<String> holaMundo(@PathVariable String name) {
 		String foo = String.format("primeros pasos de %s", name);
 		return new ResponseEntity<>(foo, HttpStatus.OK);
-		
-		
 	}
 }
