@@ -13,7 +13,6 @@
 	<description>Exposes an API Rest for front and other clients</description>
 
 	<properties>
-		<cxf.version>3.2.0</cxf.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -24,21 +23,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- cxf dependencies -->
+		<!-- CXF plug-in -->
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-			<version>${cxf.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
-			<version>${cxf.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http</artifactId>
-			<version>${cxf.version}</version>
+			<artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+			<version>3.2.1</version>
 		</dependency>
 	</dependencies>
 
@@ -48,7 +37,7 @@
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-codegen-plugin</artifactId>
-				<version>${cxf.version}</version>
+				<version>3.2.1</version>
 				<executions>
 					<execution>
 						<id>serverStubs</id>
