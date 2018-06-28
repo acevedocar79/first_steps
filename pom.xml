@@ -17,6 +17,7 @@
 
 	<prerequisites>
 		<maven>3.0</maven>
+		<tag.production></tag.production>
 	</prerequisites>
 
 	<properties>
@@ -59,6 +60,7 @@
 	<modules>
 		<module>first_steps_api_rest</module>
 		<module>first_steps_wsdl</module>
+		<module>first_steps_common</module>
 	</modules>
 
 	<build>

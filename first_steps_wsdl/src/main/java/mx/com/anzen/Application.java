@@ -8,35 +8,21 @@
  */
 package mx.com.anzen;
 
-import org.apache.cxf.transport.servlet.CXFServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
- * <p>TODO [Add comments of the class]</p>
+ * <p></p>
  * 
  * @author acevedito
  * @version first-steps-wsdl
  * @since first-steps-wsdl
  * @category
  */
-@Configuration
 @SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-	
-	
-	@Bean
-	public ServletRegistrationBean cxf() {
-		ServletRegistrationBean result = new ServletRegistrationBean(new CXFServlet(), "/services/*");
-		result.addInitParameter("config-location", "classpath:webservices-context.xml");
-		return result;
-	}
-
 }
