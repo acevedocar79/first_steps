@@ -6,7 +6,7 @@
 	<artifactId>first-steps</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>First Steps to learn maven for QA</name>
+	<name>First Steps to learn maven to Produccion</name>
 	<description>It has got modules for services rest api and soap</description>
 
 	<parent>
@@ -17,6 +17,7 @@
 
 	<prerequisites>
 		<maven>3.0</maven>
+		<tag.production></tag.production>
 	</prerequisites>
 
 	<properties>
